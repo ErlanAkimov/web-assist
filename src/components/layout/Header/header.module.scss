@@ -1,0 +1,42 @@
+.outer_wrapper {
+    background-color: #9294f8;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.local_wrapper {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.left_side {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    svg {
+        margin-top: 10px;
+    }
+}
+
+.nav {
+    display: flex;
+    column-gap: 20px;
+    padding-top: 8px;
+
+    a {
+        font-size: 18px;
+        color: #1d8fd1;
+        font-weight: bold;
+        font-weight: 600;
+
+        &:hover {
+            color: #094d74;
+        }
+    }
+
+    .active {
+        color: #094d74;
+    }
+}
+
