@@ -70,17 +70,25 @@
         fill: rgb(127, 127, 253);
     }
 }
-
-.marks {
+.labels {
     display: flex;
     column-gap: 10px;
     align-items: center;
+}
 
-    .heart {
+.marks {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+
+    .icon {
         cursor: pointer;
+        margin-right: 5px;
+
 
         path { 
             fill: #c0c0c0;
+            transition: .2s ease-in-out;
         }
 
         &:hover {
@@ -95,3 +103,8 @@
     }
 }
 
+.like_counter {
+    font-weight: 600;
+    color: rgb(148, 148, 148);
+    margin-left: -8px;
+}

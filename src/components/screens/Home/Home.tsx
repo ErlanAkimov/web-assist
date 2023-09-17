@@ -3,8 +3,11 @@ import styles from './home.module.scss';
 import Layout from '@/components/layout/layout';
 import PostCard from '@/components/PostCard/PostCard';
 import ProfileCard from '@/components/ProfileCard/ProfileCard';
+import { IPostData } from '@/interfaces/post.interface';
+import { FC } from 'react';
 
-export default function Home() {
+const Home: FC<IPostData> = ({posts}) => {
+
 	return (
 		<Layout
 			title="Главная"
@@ -12,8 +15,12 @@ export default function Home() {
 		>
 			<div className={styles.local_wrapper}>
 				<div className="postline">
-					<PostCard />
-					<PostCard />
+					{
+						posts.map((post) => {
+							return (<PostCard key={post.id} post={post} />);
+						})
+					}
+
 				</div>
 
 				<div>
@@ -24,3 +31,5 @@ export default function Home() {
 		</Layout>
 	);
 }
+
+export default Home;	
