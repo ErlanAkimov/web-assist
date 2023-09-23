@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React, { FC, } from 'react';
 import styles from './header.module.scss';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
@@ -15,6 +15,10 @@ const navLinks: Array<{ name: string; path: string }> = [
 
 const Header: FC = () => {
     const current_pathname = usePathname();
+	const [menu, setMenu] = React.useState(false);
+	const closeMobileMenu = () => {
+		setMenu(prev => prev = !prev)
+	}
 
 	return (
 		<div className={styles.outer_wrapper}>
@@ -202,7 +206,7 @@ const Header: FC = () => {
 
 			<div className={styles.mobile_menu}>
 				<div className={styles.header_mob}>
-					<svg  className={styles.close_btn} width="22" height="22" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg  className={styles.close_btn} onClick={} width="22" height="22" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<rect y="16.9706" width="24" height="2" rx="1" transform="rotate(-45 0 16.9706)" fill="white"/>
 						<rect x="1.41431" width="24" height="2" rx="1" transform="rotate(45 1.41431 0)" fill="white"/>
 					</svg>
