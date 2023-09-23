@@ -52,10 +52,24 @@
     background-color: #9294f8;
     position: absolute;
     right: 0;
-    left: 0;
+    top: 0;
     width: 300px;
     height: 100vh;
+    z-index: 100;
+}
 
+.header_mob {
+    height: 61px;
+    border-bottom: 1px solid #c0c0c0;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .close_btn {
+        cursor: pointer;
+        padding: 0px;
+    }
 }
 
 
