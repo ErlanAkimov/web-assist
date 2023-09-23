@@ -2,6 +2,7 @@ import React, { FC, } from 'react';
 import styles from './header.module.scss';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
+import Image from 'next/image';
 
 
 const navLinks: Array<{ name: string; path: string }> = [
@@ -207,6 +208,16 @@ const Header: FC = () => {
 						<rect y="16.9706" width="24" height="2" rx="1" transform="rotate(-45 0 16.9706)" fill="white"/>
 						<rect x="1.41431" width="24" height="2" rx="1" transform="rotate(45 1.41431 0)" fill="white"/>
 					</svg>
+				</div>
+
+				<div className={styles.menu_profile}>
+					<div className={styles.avatar}>
+						<Image src='/avatar.jpg' alt="asdf" width={60} height={60} />
+					</div>
+					<div className={styles.profile_text}>
+						<h3 className={styles.name}>Erlan Akimov</h3>
+						<p className={styles.rank}>CEO "web-assist"</p>
+					</div>
 				</div>
 			</div>
 		</div>

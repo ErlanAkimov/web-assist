@@ -77,6 +77,32 @@
     }
 }
 
+.menu_profile {
+    padding: 10px 20px;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    column-gap: 20px;
+    
+
+    .avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+
+    .name {
+        color: white;
+        font-weight: 500;
+    }
+
+    .rank {
+        color: #e9e9e9;
+        font-size: 14px;
+    }
+}
+
 
 
 
