@@ -51,11 +51,16 @@
 .mobile_menu {
     background-color: #9294f8;
     position: absolute;
-    right: 0;
+    right: -300px;
     top: 0;
     width: 300px;
     height: 100vh;
     z-index: 100;
+    transition: right .15s ease-in-out;
+}
+
+.opened {
+    right: 0;
 }
 
 .header_mob {
@@ -71,6 +76,8 @@
         padding: 0px;
     }
 }
+
+
 
 
 @media screen and (max-width: 765px) {
