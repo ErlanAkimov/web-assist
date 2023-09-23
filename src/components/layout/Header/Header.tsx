@@ -5,10 +5,10 @@ import {usePathname} from 'next/navigation';
 
 
 const navLinks: Array<{ name: string; path: string }> = [
-	{ name: '', path: '/' },
-	{ name: '', path: '/phys' },
-	{ name: '', path: '/chem' },
-	{ name: '', path: '/mentor' },
+	{ name: 'статьи', path: '/' },
+	{ name: 'проекты', path: '/pojects' },
+	{ name: 'резюме', path: '/mentor' },
+	{ name: 'icons', path: '/icons' },
 ];
 
 
@@ -189,9 +189,19 @@ const Header: FC = () => {
 						</nav>
 					</div>
 					<div className={styles.right_side}>
-						<div className={styles.darkmode_btn}></div>
+						<div className={styles.burger_menu}>
+							<svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect width="24" height="2" rx="1" fill="white"/>
+								<rect y="8" width="24" height="2" rx="1" fill="white"/>
+								<rect y="16" width="24" height="2" rx="1" fill="white"/>
+							</svg>
+						</div>
 					</div>
 				</div>
+			</div>
+
+			<div className={styles.mobile_menu}>
+				
 			</div>
 		</div>
 	);

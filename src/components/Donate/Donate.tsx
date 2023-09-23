@@ -14,9 +14,9 @@ const Donate = () => {
 				</svg>
 				<div>
 					<h4 className={styles.title}>
-						Вы можете поддержать проект монеткой и помочь развитию портала
+						Вы можете поддержать проект монеткой и помочь развитию блога
 					</h4>
-					<Link target='_blank' href="https://www.tinkoff.ru/cf/4m7edrhl3BW">
+					<Link target='_blank' href="https://www.tinkoff.ru/cf/9DuDX5sOteD">
 						<button className={`${'button-type-logout'} ${styles.help_btn}`}>
 							Поддержать
 						</button>

@@ -7,13 +7,14 @@
 .local_wrapper {
     height: 60px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 .left_side {
     display: flex;
     align-items: center;
-    column-gap: 50px;
+    column-gap: 30px;
     svg {
         margin-top: 10px;
     }
@@ -26,9 +27,10 @@
 
     a {
         font-size: 18px;
-        color: #1d8fd1;
+        color: #fff;
         font-weight: bold;
-        font-weight: 600;
+        font-weight: 500;
+        transition: .2s ease-in-out;
 
         &:hover {
             color: #094d74;
@@ -40,3 +42,28 @@
     }
 }
 
+.burger_menu {
+    padding: 4px 3px 0px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile_menu {
+    background-color: #9294f8;
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+
+}
+
+
+@media screen and (max-width: 765px) {
+    .burger_menu {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+}
