@@ -16,7 +16,8 @@ const navLinks: Array<{ name: string; path: string }> = [
 
 const Header: FC = () => {
     const current_pathname = usePathname();
-	const [menu, setMenu] = React.useState(false);
+	type BoolType = boolean;
+	const [menu, setMenu] = React.useState<BoolType>(false);
 
 	return (
 		<div className={styles.outer_wrapper}>
@@ -218,6 +219,14 @@ const Header: FC = () => {
 						<h3 className={styles.name}>Erlan Akimov</h3>
 						<p className={styles.rank}>CEO "web-assist"</p>
 					</div>
+				</div>
+				
+				<div className={styles.nav_mobile}>
+					{
+						navLinks.map((item) => {
+							return <Link className={ current_pathname === item.path ? styles.active : ''} key={item.path} href={item.path}>{item.name}</Link>;
+						})
+					}
 				</div>
 			</div>
 		</div>
