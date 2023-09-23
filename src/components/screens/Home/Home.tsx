@@ -11,6 +11,9 @@ const Home: FC<IPostData> = ({ posts }) => {
 			description="web-assist лучшая библиотека для начинающих разработчиков."
 		>
 			<div className="postline">
+				{
+					console.log(posts)
+				}
 			</div>
 		</Layout>
 	);

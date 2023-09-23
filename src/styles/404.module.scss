@@ -1,0 +1,31 @@
+.wrapper {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.s404 {
+    padding: 0px 30px 0px 0; 
+    border-right: 1px solid #232325;
+    font-size: 30px;
+    margin-right: 30px;
+}
+
+.contact {
+    text-align: center;
+    margin-top: 20px;
+    color: #818080;
+
+    span {
+        color: rgb(62, 62, 223);
+        cursor: pointer;
+    }
+}

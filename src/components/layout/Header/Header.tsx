@@ -232,12 +232,6 @@ const Header: FC = () => {
 						}
 					</div>
 				</div>
-
-
-
-				<div className={styles.donate_wrapper}>
-					<Donate />
-				</div>
 			</div>
 		</div>
 	);
