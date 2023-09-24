@@ -2,7 +2,7 @@ import { FC, PropsWithChildren } from 'react';
 import Header from '../Header/Header';
 import Meta from '@/components/SEO/Meta';
 import ProfileCard from '@/components/ProfileCard/ProfileCard';
-import Donate from '@/components/Donate/Donate';
+import Donate from '@/components/banners/donate-banner/Donate';
 import styles from './layout-with-sidebar.module.scss'
 
 const LayoutWithSidebar: FC<PropsWithChildren<IMeta>> = ({ title, description, children }) => {

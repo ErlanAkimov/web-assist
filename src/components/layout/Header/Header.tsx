@@ -3,7 +3,6 @@ import styles from './header.module.scss';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
 import Image from 'next/image';
-import Donate from '@/components/Donate/Donate';
 
 
 const navLinks: Array<{ name: string; path: string }> = [

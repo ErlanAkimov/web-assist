@@ -9,7 +9,7 @@ const Layout: FC<PropsWithChildren<IMeta>> = ({ title, description, children }) 
 			<div className="main_wrapper">
 				<Header />
 				<div className="wrapper">
-					<div className={styles.leftside}>{children}</div>
+					{children}
 				</div>
 			</div>
 		</Meta>
