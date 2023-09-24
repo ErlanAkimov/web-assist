@@ -7,7 +7,7 @@ import Donate from '@/components/Donate/Donate';
 
 
 const navLinks: Array<{ name: string; path: string }> = [
-	{ name: 'статьи', path: '/' },
+	{ name: 'статьи', path: '/posts/all-posts' },
 	{ name: 'проекты', path: '/pojects' },
 	{ name: 'резюме', path: '/mentor' },
 	{ name: 'icons', path: '/icons' },

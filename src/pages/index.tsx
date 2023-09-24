@@ -1,18 +1,12 @@
-import Home from '@/components/screens/Home/Home';
-import { IPostData } from '@/interfaces/post.interface';
-import { PostService } from '@/services/posts.service';
-import { GetStaticProps, NextPage } from 'next';
+import Layout from '@/components/layout/layout';
+import { NextPage } from 'next';
 
-const HomePage: NextPage<IPostData> = ({ posts }) => {
-	return <Home posts={posts} />;
+const Home: NextPage = () => {
+	return (
+		<Layout
+			title="Главная"
+			description="web-assist лучшая библиотека для начинающих разработчиков."
+		></Layout>
+	);
 };
-
-export const getStaticProps: GetStaticProps<IPostData> = async () => {
-	const posts = await PostService.getAllPosts();
-
-	return {
-		props: { posts },
-		revalidate: 300,
-	};
-}
-export default HomePage;
+export default Home;
