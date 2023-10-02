@@ -21,11 +21,11 @@ const MainBanner: FC = () => {
                         <p className={styles.slogan_text}>
                             Мы давно выбрали для себя надежного и проверенного поставщика хостинг услуг. Что выберете вы?
                         </p>
-                        <a href="https://timeweb.com/ru/services/hosting/?i=109749" target='_blank'>
+                        
                             <button className={styles.btn}>
-                                    Перейти
+                            <a href="https://timeweb.com/ru/services/hosting/?i=109749" target='_blank'>Перейти</a>
                             </button>
-                        </a>
+                        
                     </div>
                 </div>
 

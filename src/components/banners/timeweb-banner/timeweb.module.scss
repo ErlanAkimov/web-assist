@@ -14,7 +14,6 @@
 .timewebLogo {
     width: 129px;
     min-width: 129px;
-    align-self: start;
 }
 
 .slogan {
@@ -36,9 +35,12 @@
     background-color: #Fc7764;
     padding: 6px 16px;
     border-radius: 2px;
-    color: white;
     font-weight: 500;
     cursor: pointer;
+
+    a {
+        color: white;
+    }
 
     &:hover {
         background-color: #ff8b79;
@@ -52,6 +54,28 @@
     width: 100%;
 }
 
-.close_btn {
-    position: absolute;
+@media screen and (max-width: 715px) {
+
+    .wrapper {
+        padding-bottom: 20px;
+    }
+    .slogan {
+        display: block;
+
+        .slogan_text {
+            margin: 10px 0;
+            padding: 0;
+            border: none;
+        }
+    }
+
+    .right_side {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 14px;
+    }
+
+    .btn {
+        width: 100%;
+    }
 }
