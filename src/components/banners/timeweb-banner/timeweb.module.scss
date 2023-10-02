@@ -1,0 +1,57 @@
+.wrapper {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px 30px;
+    box-shadow: 0 0 10px 10px rgb(240, 240, 240);
+    display: flex;  
+    position: relative;
+    display: flex;
+    row-gap: 10px;
+    cursor: initial;
+}
+
+.timewebLogo {
+    width: 129px;
+    min-width: 129px;
+    align-self: start;
+}
+
+.slogan {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .slogan_text {
+        padding: 0 10px;
+        border-left: 2px solid #4D3B3B;
+        color: #806f6f;
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 10px;
+    }
+}
+
+.btn {
+    background-color: #Fc7764;
+    padding: 6px 16px;
+    border-radius: 2px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #ff8b79;
+    }
+}
+
+.right_side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.close_btn {
+    position: absolute;
+}
