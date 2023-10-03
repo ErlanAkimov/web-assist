@@ -12,8 +12,6 @@ const Home: NextPage = () => {
 		>
 
 			<div className="wrapper">
-				<MainBanner />
-
 				<main className={styles.main}>
 
 					<div className={styles.main__text}>
@@ -192,8 +190,9 @@ const Home: NextPage = () => {
 							</div>
 						</div>
 					</div>
-
 				</main>
+
+				<MainBanner />
 			</div>
 
 		</Layout>
