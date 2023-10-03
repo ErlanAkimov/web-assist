@@ -160,8 +160,12 @@
 
 @media screen and (max-width: 895px) {
     .main {
-        flex-direction: column-reverse;
-        row-gap: 30px;
+		flex-direction: column;
+
+		&__text {
+			order: 2;
+			margin-top: 30px;
+		}
     }
 }
 
@@ -189,9 +193,6 @@
 
 		&__title {
 			font-size: 24px;
-		}
-
-		&__description {
 		}
 	}
 }
