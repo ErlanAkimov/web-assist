@@ -12,6 +12,16 @@ const Home: NextPage = () => {
 
 			<div className="wrapper">
 				<MainBanner />
+
+				<main className={styles.main}>
+
+					<div className={styles.main__text}>
+						<h1 className={styles.title}>
+							Разработка сайтов<br /> и веб-приложений
+						</h1>
+					</div>
+
+				</main>
 			</div>
 
 		</Layout>
