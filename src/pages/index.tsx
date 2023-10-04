@@ -1,20 +1,18 @@
 import MainBlock from '@/components/Homepage components/main block/MainBlock';
 import MainBanner from '@/components/banners/timeweb-banner/TimeWeb';
+import MainBlock_2 from '@/components/Homepage components/second block/MainBlock-2';
 import Layout from '@/components/layout/layout';
 import { NextPage } from 'next';
 
 
 const Home: NextPage = () => {
 	return (
-		<Layout
-			title="Главная"
-			description="web-assist лучшая библиотека для начинающих разработчиков."
+		<Layout title="Главная" description="web-assist лучшая библиотека для начинающих разработчиков."
 		>
-
 			<div className="wrapper">
-
 				<MainBlock />
-				<MainBanner />
+				<MainBanner /> {/* Баннер TimeWeb */}
+				<MainBlock_2 />
 			</div>
 
 		</Layout>
