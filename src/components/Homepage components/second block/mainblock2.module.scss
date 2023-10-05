@@ -44,7 +44,7 @@
             width: 9px;
             height: 9px;
             border-radius: 100%;
-            background-color: red;
+            background-color: rgb(252, 105, 105);
             top: 50%;
             left: -20px;
             transform: translateY(-50%);
@@ -74,6 +74,7 @@
     font-weight: 700;
     font-size: 28px;
     text-decoration: underline;
+    white-space: nowrap;
 }
 
 .landings {
@@ -87,24 +88,90 @@
 
 @media screen and (max-width: 1439px) {
     .wrapper {
-        max-height: 450px;
+        max-height: 480px;
     }
     
-    .last_line {
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        row-gap: 20px;
+    .colored {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
+
+    .last_line {
+    
+    }
+
 }
 
 @media screen and (max-width: 1219px) {
+
     .wrapper {
-        max-width: 560px;
+        flex-direction: column-reverse;
+        max-height: initial;
     }
-    
+
+    .colored {
+        max-width: 100%;
+        z-index: 5;
+        width: 100%;
+    }
+
+    .landings {
+        // bottom: initial;
+        z-index: 0;
+        max-height: 300px;
+        padding-left: 0;
+        left: 15px;
+    }
+}
+
+@media screen and (max-width: 648px) {
+    .landings {
+        max-height: 200px;
+        left: 0;
+        padding-left: 30px;
+        padding-right: 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .checkpoints {
+        row-gap: 10px;
+        margin-left: 15px;
+
+        .item {
+            font-size: 13px;
+
+            &::before {
+                width: 6px;
+                height: 6px;
+                left: -15px;
+            }
+        }
+    }
+
     .last_line {
         flex-direction: column-reverse;
-        align-items: flex-start;
-        row-gap: 20px;
+    }
+
+    .cost {
+        font-size: 22px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .btn {
+        padding: 8px 0;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 20px;
     }
 }
