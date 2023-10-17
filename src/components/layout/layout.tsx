@@ -1,6 +1,6 @@
 import styles from './layout.module.scss';
 import { FC, PropsWithChildren } from 'react';
-import Header from './Header/Header';
+import Header from '../Header/Header';
 import Meta from '@/components/SEO/Meta';
 
 const Layout: FC<PropsWithChildren<IMeta>> = ({ title, description, children }) => {
@@ -8,7 +8,6 @@ const Layout: FC<PropsWithChildren<IMeta>> = ({ title, description, children }) 
 		<Meta title={title} description={description}>
 			<div className="main_wrapper">
 				<Header />
-				
 				{children}
 			</div>
 		</Meta>

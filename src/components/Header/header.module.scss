@@ -31,14 +31,27 @@
         font-weight: bold;
         font-weight: 500;
         transition: .2s ease-in-out;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0%;
+            transition: .2s ease-in-out linear;
+            
+        }
 
         &:hover {
             color: #094d74;
         }
+
+
     }
 
     .active {
-        color: #094d74;
+        color: #c0c0c0;
     }
 }
 

@@ -3,7 +3,7 @@ import { IPostData } from "@/interfaces/post.interface";
 import PostCard from '@/components/PostCard/PostCard';
 import { FC } from 'react';
 import { PostService } from '@/services/posts.service';
-import { GetStaticProps, NextPage } from 'next';
+import { GetStaticProps } from 'next';
 import LayoutWithSidebar from '@/components/layout/layout-with-sidebar/LayoutWithSidebar';
 
 const Home: FC<IPostData> = ({posts}) => {
