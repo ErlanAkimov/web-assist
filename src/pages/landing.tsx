@@ -66,6 +66,13 @@ const LandingPage: NextPage = () => {
                                 }
                             </ul>
 
+                            <div className={styles.sale}>
+                                <p className={styles.sale_text}>
+                                    Получите скидку на разработку и дальнейшее сопровождение сайта. Подробности уточняйте в телеграме
+                                </p>
+                                <div className={styles.title}>-50%</div>
+                            </div>
+
                             <form action="" className={styles.form}>
                                 {/* <input className={styles.callback_input} type="text" placeholder='Введите ваше имя' />
                                 <input className={styles.callback_input} type="text" placeholder='Номер телефона' />

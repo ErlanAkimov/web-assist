@@ -256,6 +256,25 @@
     }
 }
 
+.sale {
+    margin-top: 30px;
+    background-color: rgb(212, 74, 64);
+    border-radius: 10px;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .sale_text {
+        color: #f0f0f0;
+        max-width: 720px;
+    }
+
+    .title {
+        color: white;
+    }
+}
+
 @media screen and (max-width: 1439px) {
     .main_img_block {
         min-width: 280px;
