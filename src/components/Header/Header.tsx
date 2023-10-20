@@ -3,17 +3,15 @@ import styles from './header.module.scss';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
 
-
-const navLinks: Array<{ name: string; path: string }> = [
-	{ name: 'статьи', path: '/posts/all-posts' },
-	{ name: 'проекты', path: '/projects' },
-	{ name: 'резюме', path: '/mentor' },
-	{ name: 'icons', path: '/icons' },
-];
-
-
-
 const Header: FC = () => {
+	const navLinks: Array<{ name: string; path: string }> = [
+		{ name: 'статьи', path: '/posts/all-posts' },
+		{ name: 'проекты', path: '/projects' },
+		{ name: 'резюме', path: '/mentor' },
+		{ name: 'услуги', path: '/services' },
+	];
+	
+
     const current_pathname = usePathname();
 	return (
 		<div className={styles.outer_wrapper}>
