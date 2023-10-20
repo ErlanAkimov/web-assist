@@ -4,6 +4,10 @@
 	//colors
 	--header-light: #bbeeff;
 	--text-light: #094d74;
+
+	--main-color: rgb(22, 90, 153);
+	--main-color-hover: rgb(35, 113, 185);
+	--main-color-active:rgb(8, 75, 138);
 }
 
 * {
@@ -37,7 +41,7 @@ body {
 	padding-bottom: 100px;
 	min-height: 100vh;
 	perspective: 1500px;
-	overflow: hidden;
+	// overflow: hidden;
 }
 
 .wrapper {

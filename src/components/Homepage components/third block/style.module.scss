@@ -1,0 +1,22 @@
+.wrapper {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.card {
+    width: 100%;
+    border: 1px solid rgb(211, 207, 207);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}

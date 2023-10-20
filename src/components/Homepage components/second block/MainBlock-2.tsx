@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from './mainblock2.module.scss'
 import Image from "next/image";
+import Link from "next/link";
 
 const MainBlock_2:FC = () => {
     return (
@@ -19,7 +20,7 @@ const MainBlock_2:FC = () => {
                 </ul>
                 
                 <div className={styles.last_line}>
-                    <button className={styles.btn}>Подробнее</button>
+                    <Link href="/landing" ><button className={styles.btn}>Подробнее</button></Link>
                     <span className={styles.cost}>от 2000 руб.</span>
                 </div>
             </div>
