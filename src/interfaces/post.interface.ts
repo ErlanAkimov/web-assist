@@ -1,6 +1,7 @@
 export interface IPost {
     post_id: number,
     title: string,
+    short: string,
     description: string,
     seo_description: string,
     likes: number,

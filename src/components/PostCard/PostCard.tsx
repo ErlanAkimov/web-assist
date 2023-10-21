@@ -5,13 +5,10 @@ import { IPostDataSingle } from '@/interfaces/post.interface';
 import axios from 'axios';
 
 const PostCard: FC<IPostDataSingle> = ({ post }) => {
-	const user_id = 13;
-	const path = 'https://6507b4dd3a38daf4803faad3.mockapi.io/UserData/' + user_id;
-
 	const data = {
-		liked_posts: [0],
-		disliked_posts: [0],
-		marked_posts: [0],
+		liked_posts: [],
+		disliked_posts: [],
+		marked_posts: [],
 	};
 	const [marked, setMarked] = React.useState(false);
 	const [liked, setLiked] = React.useState(false);
@@ -43,7 +40,7 @@ const PostCard: FC<IPostDataSingle> = ({ post }) => {
 			</svg>
 
 			<h1 className={styles.title}>{post.title}</h1>
-			<p className={styles.text}>{post.description}</p>
+			<p className={styles.text}>{post.short}</p>
 			<div className={styles.underline}>
 				<div className={styles.marks}>
 					<label onClick={likeToggler} className={styles.labels}>
