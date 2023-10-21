@@ -13,9 +13,12 @@ const Home: FC<IPostData> = ({posts}) => {
 	React.useEffect(() => {
 		fetch('/api/allPosts')
 		.then((response) => response.json())
-		.then((data12) => setData(data12));
+		.then((data12) => setData(data12));		
 	}, [])
 
+	React.useEffect(() => {
+		console.log(data2)
+	}, [data2])
 
 	return (
 		<LayoutWithSidebar
