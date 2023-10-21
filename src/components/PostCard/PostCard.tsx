@@ -18,9 +18,9 @@ const PostCard: FC<IPostDataSingle> = ({ post }) => {
 	const [dislikes, setDislikes] = React.useState(post.dislikes);
 
 	React.useEffect(() => {
-		data.marked_posts.includes(post.post_id) ? setMarked(true) : setMarked(false);
-		data.liked_posts.includes(post.post_id) ? setLiked(true) : setLiked(false);
-		data.disliked_posts.includes(post.post_id) ? setDisliked(true) : setDisliked(false);
+		// data.marked_posts.includes(post.post_id) ? setMarked(true) : setMarked(false);
+		// data.liked_posts.includes(post.post_id) ? setLiked(true) : setLiked(false);
+		// data.disliked_posts.includes(post.post_id) ? setDisliked(true) : setDisliked(false);
 	}, []);
 
 	return (
