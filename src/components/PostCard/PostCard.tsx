@@ -97,7 +97,7 @@ const PostCard: FC<IPostDataSingle> = ({ post }) => {
 		</div>
 	);
 
-	function bookmarkToggler(e: any, post_id) {
+	function bookmarkToggler(e: any, post_id:string) {
 		marked ? localStorage.removeItem(post_id + 'marked') : localStorage.setItem(post_id + 'marked', 'marked');
 		setMarked(prev => !prev);
 	}
