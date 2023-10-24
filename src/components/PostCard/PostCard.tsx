@@ -1,32 +1,34 @@
 import React, { FC } from 'react';
 import styles from './postcard.module.scss';
 import Link from 'next/link';
-import { IPostDataSingle } from '@/interfaces/post.interface';
+import { IPost, IPostDataSingle } from '@/interfaces/post.interface';
 import axios from 'axios';
+import { getFirestore, updateDoc, doc} from "firebase/firestore";
+import app from '@/pages/api/data/firebase'
+
+
 
 const PostCard: FC<IPostDataSingle> = ({ post }) => {
-	const data = {
-		liked_posts: [],
-		disliked_posts: [],
-		marked_posts: [],
-	};
 	const [marked, setMarked] = React.useState(false);
 	const [liked, setLiked] = React.useState(false);
 	const [disliked, setDisliked] = React.useState(false);
-
 	const [likes, setLikes] = React.useState(post.likes);
 	const [dislikes, setDislikes] = React.useState(post.dislikes);
+	const firestore = getFirestore(app);
+	const docRef = doc(firestore, 'posts', String(post.post_id))
 
 	React.useEffect(() => {
-		// data.marked_posts.includes(post.post_id) ? setMarked(true) : setMarked(false);
-		// data.liked_posts.includes(post.post_id) ? setLiked(true) : setLiked(false);
-		// data.disliked_posts.includes(post.post_id) ? setDisliked(true) : setDisliked(false);
+		const like = localStorage.getItem(post.post_id + "liked?");
+		const mark = localStorage.getItem(post.post_id + "marked");
+		mark ? setMarked(true) : setMarked(false);
+		like === 'like' ? setLiked(true) : setLiked(false);
+		like === 'dislike' ? setDisliked(true) : setDisliked(false);
 	}, []);
 
 	return (
 		<div className={styles.wrapper}>
 			<svg
-				onClick={bookmarkToggler}
+				onClick={(e) => {bookmarkToggler(e, post.post_id)}}
 				className={styles.bookmark}
 				width="19"
 				height="21"
@@ -43,7 +45,7 @@ const PostCard: FC<IPostDataSingle> = ({ post }) => {
 			<p className={styles.text}>{post.short}</p>
 			<div className={styles.underline}>
 				<div className={styles.marks}>
-					<label onClick={likeToggler} className={styles.labels}>
+					<label onClick={(e) => {likeToggler(e, String(post.post_id))}} className={styles.labels}>
 						<svg
 							className={styles.icon}
 							width="22"
@@ -59,7 +61,7 @@ const PostCard: FC<IPostDataSingle> = ({ post }) => {
 						<span className={styles.like_counter}>{likes}</span>
 					</label>
 
-					<label onClick={dislikeToggler} className={styles.labels}>
+					<label onClick={e => {dislikeToggler(e, String(post.post_id))}} className={styles.labels}>
 						<svg
 							className={styles.icon}
 							width="22"
@@ -95,39 +97,55 @@ const PostCard: FC<IPostDataSingle> = ({ post }) => {
 		</div>
 	);
 
-	function bookmarkToggler(e: any) {
-		setMarked((prev) => {
-			prev = !prev;
-			return prev;
-		});
+	function bookmarkToggler(e: any, post_id) {
+		marked ? localStorage.removeItem(post_id + 'marked') : localStorage.setItem(post_id + 'marked', 'marked');
+		setMarked(prev => !prev);
 	}
 
-	function likeToggler(e: any) {
-		liked === true
-			? setLikes((prev) => {
-					return prev - 1;
-			  })
-			: setLikes((prev) => {
-					return prev + 1;
-			  });
-		setLiked((prev) => {
-			prev = !prev;
-			return prev;
-		});
+	function likeToggler(e: any, post_id: string) {
+		let update = {};
+		if (localStorage.getItem(post_id + 'liked?') === 'dislike') {
+			setDisliked(false);
+			setDislikes(prev => prev - 1);
+			const update_dislikes = { dislikes: dislikes - 1 }
+			updateDoc(docRef, update_dislikes);
+		}
+
+		if (liked) {
+			setLikes(prev => prev - 1);
+			update = {likes: likes - 1}
+			localStorage.removeItem(post_id + "liked?");
+		} else {
+			update = {likes: likes + 1}
+			setLikes(prev => prev + 1);
+			localStorage.setItem(post_id + "liked?", "like");
+		}
+
+		updateDoc(docRef, update);
+		setLiked(prev => !prev);
 	}
 
-	function dislikeToggler(e: any) {
-		disliked === true
-			? setDislikes((prev) => {
-					return prev - 1;
-			  })
-			: setDislikes((prev) => {
-					return prev + 1;
-			  });
-		setDisliked((prev) => {
-			prev = !prev;
-			return prev;
-		});
+	function dislikeToggler(e: any, post_id:string) {
+		let update = {};
+		if (localStorage.getItem(post_id + 'liked?') === 'like') {
+			setLiked(false);
+			setLikes(prev => prev - 1);
+			const update_likes = { likes: likes - 1 }
+			updateDoc(docRef, update_likes);
+		}
+
+		if (disliked) {
+			setDislikes(prev => prev - 1);
+			update = {dislikes: dislikes - 1}
+			localStorage.removeItem(post_id + "liked?");
+		} else {
+			setDislikes(prev => prev + 1);
+			update = {dislikes: dislikes + 1}
+			localStorage.setItem(post_id + "liked?", "dislike");
+		}
+
+		updateDoc(docRef, update);
+		setDisliked(prev => !prev);
 	}
 };
 

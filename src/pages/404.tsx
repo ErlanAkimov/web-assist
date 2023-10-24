@@ -12,7 +12,7 @@ const Page404: NextPage = () => {
 				<div className={styles.main}>
 					<div className={styles.s404}>404</div>
 					<div>
-						<p>Страница не найдена.</p>
+						<p>Данный раздел находится на стадии разработки.</p>
 					</div>
 				</div>
 			</div>

@@ -5,10 +5,10 @@ import {usePathname} from 'next/navigation';
 
 const Header: FC = () => {
 	const navLinks: Array<{ name: string; path: string }> = [
-		{ name: 'статьи', path: '/posts/all-posts' },
-		{ name: 'проекты', path: '/projects' },
-		{ name: 'резюме', path: '/mentor' },
-		{ name: 'услуги', path: '/services' },
+		{ name: 'Услуги', path: '/services' },
+		{ name: 'Статьи', path: '/posts/all-posts' },
+		{ name: 'Обучение', path: '/mentor' },
+		{ name: 'Проекты', path: '/projects' },
 	];
 	
 
