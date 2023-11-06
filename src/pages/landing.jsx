@@ -1,5 +1,4 @@
-import { NextPage } from 'next';
-import Layout from '@/components/layout/layout';
+import Layout from '../components/layout/layout';
 import styles from '../styles/landing.module.scss';
 import Image from 'next/image';
 import React from 'react';
@@ -15,7 +14,7 @@ const garanties = [
     'Помощь с публикацией сайта в сети',
     'Установка бесплатного SSL сертификата',
 ]
-const LandingPage: NextPage = () => {
+const LandingPage = () => {
 
     return (
         <Layout title='Landing' description='web-assist знает, как правильно спроектировать landing page, чтобы получить максимальную конверсию. Переходите на сайте и убедитесь в этом сами'>

@@ -1,9 +1,8 @@
-import { FC, PropsWithChildren } from 'react';
 import Head from 'next/head';
 
-const getTitle = (title: string) => `${title} || web-assist`;
+const getTitle = (title) => `${title} || web-assist`;
 
-const Meta: FC<PropsWithChildren<IMeta>> = ({ title, description, children }) => {
+const Meta = ({ title, description, children }) => {
 	return (
 		<>
 			<Head>

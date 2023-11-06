@@ -1,9 +1,8 @@
-import { FC } from "react";
 import styles from './mainblock2.module.scss'
 import Image from "next/image";
 import Link from "next/link";
 
-const MainBlock_2:FC = () => {
+const MainBlock_2= () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.colored}>

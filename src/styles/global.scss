@@ -2,12 +2,15 @@
 
 :root {
 	//colors
-	--header-light: #bbeeff;
+	--header-light: #bef;
 	--text-light: #094d74;
 
 	--main-color: rgb(22, 90, 153);
 	--main-color-hover: rgb(35, 113, 185);
 	--main-color-active:rgb(8, 75, 138);
+
+	--btn-type-1: #9294f8;
+	--btn-type-1-hover: #8d8eff;
 }
 
 * {
@@ -57,17 +60,16 @@ body {
 
 .button-type-1 {
     width: 100%;
-    margin-top: 20px;
     font-size: 15px;
     padding: 13px 0;
     border-radius: 10px;
-    background-color: #9294f8;
+    background-color: var(--btn-type-1);
     color:white;
     font-weight: 500;
     cursor: pointer;
 
     &:hover {
-        background-color: #8d8eff;
+        background-color: var(--btn-type-1-hover);
         box-shadow: 0 3px 5px 5px rgb(238, 238, 238);
     }
 

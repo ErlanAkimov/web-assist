@@ -7,6 +7,13 @@
     flex: 1;
 }
 
+.loader {
+    height: 17px;
+    border-radius: 5px;
+    // background: linear-gradient(to left, #f0f0f0, #e9e6e6 50%);
+    background-color: #f0f0f0;
+}
+
 .title {
     font-size: 22px;
     color: var(--text-light);

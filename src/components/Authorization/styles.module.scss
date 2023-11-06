@@ -1,0 +1,51 @@
+.login {
+	display: flex;
+	flex-direction: column;
+
+	&__title {
+		color: var(--text-light);
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	.forgotPass {
+		width: fit-content;
+		align-self: center;
+		cursor: pointer;
+		color: rgb(63, 63, 63);
+		padding: 0 7px;
+		margin-bottom: 5px;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.input {
+		width: 100%;
+		border: 1px solid var(--header-light);
+		padding: 10px 20px;
+		font-size: 14px;
+	}
+
+	.loginBtn {
+		margin-top: 20px;
+		background-color: var(--main-color-hover);
+	}
+}
+
+.createBtn {
+	margin-top: 10px;
+}
+
+.validate_message_block	{
+	transition: .2s ease-in-out;
+}
+.validate {
+	margin-top: 7px;
+	margin-bottom: 10px;
+	padding: 0 20px;
+	color: red;
+	font-size: 14px;
+	line-height: 16px;
+}

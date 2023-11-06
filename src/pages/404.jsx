@@ -1,8 +1,7 @@
-import Layout from '@/components/layout/layout';
-import styles from '@/styles/404.module.scss';
-import { NextPage } from 'next';
+import Layout from '../components/layout/layout';
+import styles from '../styles/404.module.scss';
 
-const Page404: NextPage = () => {
+const Page404 = () => {
 	return (
 		<Layout
 			title="404"

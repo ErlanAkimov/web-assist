@@ -1,8 +1,7 @@
 import Image from 'next/image';
-import { FC } from 'react';
 import styles from './mainblock.module.scss';
 
-const MainBlock: FC = () => {
+const MainBlock = () => {
 	return (
 		<main className={styles.main}>
 			<div className={styles.main__text}>
@@ -23,6 +22,7 @@ const MainBlock: FC = () => {
 					alt="notebook"
 					width={587.78}
 					height={400}
+					priority
 				/>
 				<div className={styles.main__miniSite}>
 					<svg

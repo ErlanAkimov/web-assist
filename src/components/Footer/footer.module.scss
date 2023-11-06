@@ -61,7 +61,12 @@
     background-color: #fff;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;   
+}
 
-    
+@media screen and (max-width: 850px) {
+    .footer__wrapper {
+        flex-direction: column;
+        row-gap: 30px;
+    }
 }

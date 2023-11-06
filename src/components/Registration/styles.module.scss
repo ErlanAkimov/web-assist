@@ -1,0 +1,85 @@
+.wrapper_outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.3);
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 360px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 30px 10px rgb(150, 150, 150);
+    position: relative;
+    z-index: 20;
+}
+
+.title {
+	color: var(--text-light);
+	margin-bottom: 10px;
+	text-align: center;
+    line-height: 40px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 10px;
+}
+
+.input {
+    width: 100%;
+    border: 1px solid var(--header-light);
+    padding: 10px 20px;
+    font-size: 14px;
+    &::placeholder {
+        font-size: 15px;
+    }
+}
+
+.createBtn {
+    margin-top: 30px;
+}
+
+.annotation {
+    border-radius: 5px;
+    background-color: var(--header-light);
+    padding: 10px 20px;
+    font-size: 14px;
+}

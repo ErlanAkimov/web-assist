@@ -1,7 +1,6 @@
-import { FC } from 'react';
 import styles from './timeweb.module.scss'
 
-const MainBanner: FC = () => {
+const MainBanner = () => {
 	return (
 
             <div className={styles.wrapper}>

@@ -1,7 +1,6 @@
-import { FC } from 'react';
 import styles from './style.module.scss';
 
-const MainBlock_3: FC = () => {
+const MainBlock_3 = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.card}>

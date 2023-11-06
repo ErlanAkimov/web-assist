@@ -1,16 +1,15 @@
-import { FC } from "react";
 import styles from './footer.module.scss'
 import Link from "next/link";
 
-const Footer: FC = () => {
-    const navLinks: Array<{ name: string; path: string }> = [
+const Footer = () => {
+    const navLinks = [
         { name: 'Услуги', path: '/services' },
         { name: 'Статьи', path: '/posts/all-posts' },
         { name: 'Обучение', path: '/mentor' },
         { name: 'Проекты', path: '/projects' },
     ];
 
-    const navLinks2: Array<{ name: string; path: string }> = [
+    const navLinks2 = [
         { name: 'Акции', path: '/sale' },
         { name: 'Вакансии', path: '/job' },
         { name: 'Store', path: '/store' },
